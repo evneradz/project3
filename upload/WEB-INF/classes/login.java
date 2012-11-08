@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
  
@@ -27,7 +26,7 @@ private Connection getConnection() throws Exception {
    try {
      String url = "jdbc:mysql://localhost/login";       
      Class.forName("com.mysql.jdbc.Driver");
-     conn = DriverManager.getConnection(url,"root","%ev6705");
+     conn = DriverManager.getConnection(url,"root","******");
 
    } catch (SQLException sqle) {
       System.out.println("SQLException: Unable to open connection to db: "+sqle.getMessage());
@@ -61,7 +60,8 @@ private boolean authenticateLogin(String strUserName, String strPassword) throws
  return isValid;
 }
 
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 private boolean register(String strUserName, String strPassword) throws Exception {
   boolean isValid = true;
   Connection conn = null;
